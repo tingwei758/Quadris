@@ -6,9 +6,27 @@ A game of Quadris consists of a board, 11 columns wide and 15 rows high. Blocks 
 
 Quadris differs from Tetris in one significant way: it is not real-time. You have as much time as you want to decide where to place a block.
 
+### Execution
 
-### Command
+Open a shell, go to */bin* and execute the following command:
 
+*./quadris -text*
+
+
+### Command-line argument
+
+**-text** runs the program in text-only mode. No graphics are displayed. The default behaviour
+(no -text) is to show both text and graphics.
+
+**-seed xxx** sets the random number generator’s seed to **xxx**. If you don’t set the seed, you always get the same random sequence every time you run the program. It’s good for testing, but not much fun.
+
+**-scriptfile xxx** Uses **xxx** instead of **sequence.txt** as a source of blocks for level 0.
+
+**-startlevel n** Starts the game in level **n**. The game starts in level 0 if this option is not
+supplied.
+
+
+### Game command
 
 **left** moves the current block one cell to the left. If this is not possible (left edge of the board, or block in the way), the command has no effect.
 
@@ -53,17 +71,5 @@ construction of test cases.
 
 **Level 4:** In addition to the rules of Level 3, in Level 4 there is an external constructive force: every time you place 5 (and also 10, 15, etc.) blocks without clearing at least one row, a 1x1 block (indicated by * in text, and by the colour brown in graphics) is dropped onto your game board in the centre column. Once dropped, it acts like any other block: if it completes a row, the row disappears. So if you do not act quickly, these blocks will work to eventually split your screen in two, making the game difficult to play.
 
-
-### Command-line
-
-**-text** runs the program in text-only mode. No graphics are displayed. The default behaviour
-(no -text) is to show both text and graphics.
-
-**-seed xxx** sets the random number generator’s seed to **xxx**. If you don’t set the seed, you always get the same random sequence every time you run the program. It’s good for testing, but not much fun.
-
-**-scriptfile xxx** Uses **xxx** instead of **sequence.txt** as a source of blocks for level 0.
-
-**-startlevel n** Starts the game in level **n**. The game starts in level 0 if this option is not
-supplied.
 
 
