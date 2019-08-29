@@ -1,4 +1,4 @@
-# quadris
+# Quadris
 
 ![ScreenShot](Description/text.png)
 
